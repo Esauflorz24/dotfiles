@@ -58,7 +58,7 @@ workspaces() {
 	name=1
 	for monitor in `bspc query -M`; do
 		#bspc monitor ${monitor} -n "$name" -d 'I' 'II' 'III' 'IV' 'V' 'VI' 'VII' 'VIII'
-		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' ''
+		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' ''
 		let name++
 	done
 }
@@ -97,22 +97,17 @@ bspc rule -a firefox desktop='^2' follow=on focus=on
 bspc rule -a chromium desktop='^2' follow=on focus=on
 
 ## 3 > files (always open file manager on workspace-3)
-declare -a files=(Pcmanfm Thunar qBittorrent)
+declare -a files=(Visual Studio Code)
 for i in ${files[@]}; do
-   bspc rule -a $i desktop='^5' follow=on focus=on; done
-
-## 4 > code (always open editors on workspace-4)
-declare -a code=(Visual Studio Code)
-for i in ${code[@]}; do
    bspc rule -a $i desktop='^3' follow=on focus=on; done
 
-#Spotify
-declare -a spoti=(spotify)
-for i in ${spoti[@]}; do
+## 4 > code (always open editors on workspace-4)
+declare -a code=(Spotify)
+for i in ${code[@]}; do
    bspc rule -a $i desktop='^4' follow=on focus=on; done
 
 ## 5 > office and docs (always open office/doc apps on workspace-5)
-declare -a office=(Gucharmap Atril Evince \
+declare -a office=(Pcmanfm Thunar qBittorrent \
 libreoffice-writer libreoffice-calc libreoffice-impress \
 libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
 for i in ${office[@]}; do
@@ -135,7 +130,7 @@ declare -a settings=(Lxappearance Lxtask Lxrandr Arandr \
 System-config-printer.py Pavucontrol Exo-helper-1 \
 Xfce4-power-manager-settings)
 for i in ${settings[@]}; do
-   bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
+   bspc rule -a $i desktop='^7' state=floating follow=on focus=on; done
 
 ## Always Floating Apps
 declare -a floating=(alacritty-float Pcmanfm Thunar Onboard Yad 'Firefox:Places' \
