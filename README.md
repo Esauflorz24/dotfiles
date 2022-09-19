@@ -14,7 +14,7 @@ Install `yay -S zsh-autosuggestions` and copy this line on  `.zshrc`
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
-# Customize powerlevel10k
+# `Customize powerlevel10k`
 
 Open `.p10k.zsh` and changes `DIR_FOREGROUND`
 ```
