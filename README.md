@@ -1,7 +1,7 @@
 # dotfiles
 my dotfiles :)
 
-# `-Zsh syntax highlighting and zsh auto-suggestions`
+# `Zsh syntax highlighting `
 
 copy on your `.zshrc`
 ```
