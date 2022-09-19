@@ -22,3 +22,6 @@ Open `.p10k.zsh` and changes `DIR_FOREGROUND`
 
 and `DIR_ANCHOR_FOREGROUND` 
 
+```
+ typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=232
+```
