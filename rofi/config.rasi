@@ -1,8 +1,14 @@
 configuration {
-  show-icons:         true;
-  icon-theme:         "Zafiro";
-  terminal:           "alacritty";
-  cycle:              false;
-  hide-scrollbar:     true;
-  disable-history:    false;
+  modi: "drun,window";
+  disable-history: false;
+  display-drun: "";
+  display-window: "﩯";
+  drun-display-format: "{name}";
+  font: "CaskaydiaCove Nerd Font 10";
+  icon-theme: "Papirus";
+  show-icons: true;
+  sidebar-mode: false;
+  window-format: "[{w}] {t}";
 }
+
+@theme "fullscreen"
