@@ -1,7 +1,3 @@
-# Antonio Sarosi
-# https://youtube.com/c/antoniosarosi
-# https://github.com/antoniosarosi/dotfiles
-
 # Qtile workspaces
 
 from libqtile.config import Key, Group
@@ -21,7 +17,7 @@ from .keys import mod, keys
 # nf-mdi-layers
 
 groups = [Group(i) for i in [
-    "   ", "   ", "   ", "   ", "  ", "   ", "   ", "   ", "   ",
+    "   ", "   ", "   ", "   ", "  ", "   ", "   ",
 ]]
 
 for i, group in enumerate(groups):
@@ -32,3 +28,4 @@ for i, group in enumerate(groups):
         # Send window to workspace N
         Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
     ])
+
