@@ -5,4 +5,5 @@ volumeicon &
 nm-applet &
 cbatticon -u 5 &
 picom &
-dex $HOME/.config/autostart/arcolinux-welcome-app.desktop &
+#picom --config=$HOME/.config/picom/picom.conf &
+
