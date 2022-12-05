@@ -7,17 +7,16 @@ from .keys import mod, keys
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
 # Icons: 
+# nf-fa-eye
 # nf-fa-firefox, 
 # nf-fae-python, 
-# nf-dev-terminal, 
-# nf-fa-code, 
+# nf-fa-spotify, 
 # nf-oct-git_merge, 
 # nf-linux-docker,
-# nf-mdi-image, 
-# nf-mdi-layers
+# nf-mdi-folder_multiple
 
 groups = [Group(i) for i in [
-    "   ", "   ", "   ", "   ", "  ", "   ", "   ",
+    "   ", "   ", "   ", " 阮  ", "  ", "   ", "   ",
 ]]
 
 for i, group in enumerate(groups):
@@ -28,4 +27,3 @@ for i, group in enumerate(groups):
         # Send window to workspace N
         Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
     ])
-
