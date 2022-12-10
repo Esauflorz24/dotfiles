@@ -1,0 +1,7 @@
+setxkbmap -layout us -variant altgr-intl -option nodeadkeys &
+
+picom &
+
+nitrogen --restore &
+
+volumeicon &
