@@ -1,7 +1,14 @@
+# keyboard layout
 setxkbmap -layout us -variant altgr-intl -option nodeadkeys &
 
+# composer
 picom &
 
+# walpapper aplication
 nitrogen --restore &
 
+#volumen icon
 volumeicon &
+
+#notifications
+dunst -conf ~/.config/dunst/dunstrc &
