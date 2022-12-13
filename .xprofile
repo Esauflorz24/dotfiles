@@ -7,8 +7,8 @@ picom &
 # walpapper aplication
 nitrogen --restore &
 
-#volumen icon
+# volumen icon
 volumeicon &
 
-#notifications
+# notifications
 dunst -conf ~/.config/dunst/dunstrc &
