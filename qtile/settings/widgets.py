@@ -42,8 +42,8 @@ def workspaces(icon_fontsize=19, window_name_font_size=14):
             margin_y=3,
             margin_x=0,
             padding_y=8,
-            padding_x=5,
-            borderwidth=2,
+            padding_x=8,
+            borderwidth=1,
             active=colors['active'],
             inactive=colors['inactive'],
             rounded=False,
@@ -129,11 +129,27 @@ def primary_widgets():
 
         powerline('color3', 'color4'),
 
-        icon(bg="color3", text=' '),  # Icon: nf-fa-feed
+        icon(bg="color3", text='  '),  # Icon: nf-fa-feed
 
-        widget.Net(**base(bg='color3'), interface='wlan0'),
+         widget.Net(**base(bg='color3'),format ='{down} ↓↑ {up}',padding=4),
+        # widget.NetGraph(**base(bg='color3'),type='line',graph_color='000000',border_color='000000'),
 
-        powerline('color2', 'color3'),
+        # widget. BatteryIcon(**base(bg='color3'),
+        #     battery='0',
+        #     update_interval=10,
+        #    ),
+        powerline('color2.1', 'color3'),
+
+        widget.Battery(**base(bg='color2.1'),
+            charge_char='^', 
+            update_delay=5,
+            format="  {percent:2.0%}",
+            padding=4,
+            notify_below=True,
+            notification_timeout = 5,
+        ),
+
+        powerline('color2', 'color2.1'),
 
         widget.CurrentLayoutIcon(**base(bg='color2'), scale=0.65),
 
@@ -143,7 +159,7 @@ def primary_widgets():
 
         icon(bg="color1", text=' '), # Icon: nf-mdi-calendar_clock
 
-        widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M '),
+        widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %I:%M '),
 
         powerline('dark', 'color1'),
 
@@ -161,7 +177,7 @@ def secondary_widgets():
 
         widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
 
-        widget.CurrentLayout(**base(bg='color1'), padding=5),
+        widget.CurrentLayout(**base(bg='color1'), padding=8),
 
         powerline('color2', 'color1'),
 
